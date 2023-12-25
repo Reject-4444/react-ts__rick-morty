@@ -5,7 +5,7 @@
   &__description {
     @include fontPermanentMarker;
     margin: 20px auto;
-    text-align: justify;
+    text-align: center;
     text-shadow: 0 0 10px $green-color;
     color: $blue-color;
     font-size: 14px;
