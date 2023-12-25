@@ -191,6 +191,7 @@
         letter-spacing: 0.25px;
         line-height: 20px;
         @include fontRoboto;
+        width: 100px;
 
         @include onTablet {
           font-size: 12px;
