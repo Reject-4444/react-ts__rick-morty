@@ -4,7 +4,7 @@ import axios from 'axios';
 import { CHARACTERS_URL, EPISODES_URL } from '../../API/urls';
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { getCharacter } from '../../redux/features/singleCharacterSlice';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styles from './CharacterDetails.module.scss';
 import { ButtonGoBack } from '../../components/UI/ButtonGoBack/ButtonGoBack';
 import { ImageCharacterDetails } from '../../components/UI/ImageCharacterDetails/ImageCharacterDetails';
@@ -12,6 +12,7 @@ import { getEpisodes } from '../../redux/features/episodesSlice';
 import { EpisodesType } from '../../types/types';
 import { Loader } from '../../components/UI/Loader/Loader';
 import { ErrorPage } from '../ErrorPage/ErrorPage';
+import { actions } from '../../redux/features/loadMoreEpisodesInCharacter';
 
 export const CharacterDetails = () => {
   const { characterId } = useParams();
@@ -21,6 +22,7 @@ export const CharacterDetails = () => {
     const response = await axios.get(CHARACTERS_URL + `/${characterId}`);
     dispatch(getCharacter(response.data));
   });
+  const [quantityOfEpisodes, setQuantityOfEpisodes] = useState(4);
 
   const episodes = useAppSelector((state) => state.episodes.episodes);
 
@@ -51,6 +53,10 @@ export const CharacterDetails = () => {
       : [];
   }, [characterId, episodes]);
 
+  const amountOfEpisodesInCharacter = useAppSelector(
+    (state) => state.loadMoreEpisodesInCharacter.amountOfEpisodesInCharacter
+  );
+
   const isLoading = useAppSelector((state) => state.isLoadingError.isLoading);
   const isError = useAppSelector((state) => state.isLoadingError.isError);
 
@@ -58,6 +64,10 @@ export const CharacterDetails = () => {
     fetchCharacter();
     fetchAllEpisodes();
   }, [characterId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    dispatch(actions.setAmountOfEpisodesInCharacter(filteredEpisodes.length));
+  }, [filteredEpisodes.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={styles['character-details']}>
@@ -175,26 +185,39 @@ export const CharacterDetails = () => {
             </div>
 
             <div className={styles['character-details__episodes']}>
-              {filteredEpisodes.slice(0, 4).map((episode, index) => (
-                <Link
-                  to={`/episodes/${episode.id}`}
-                  key={`${episode.air_date}__${index}`}
-                  className={styles['character-details__episodes-item']}
-                >
-                  <h5 className={styles['character-details__episodes-title']}>
-                    {episode.episode}
-                  </h5>
-                  <p className={styles['character-details__episodes-name']}>
-                    {episode.name}
-                  </p>
-                  <p className={styles['character-details__episodes-airdate']}>
-                    {episode.air_date}
-                  </p>
-                  <div
-                    className={styles['character-details__episodes-arrow']}
-                  />
-                </Link>
-              ))}
+              {filteredEpisodes
+                .slice(0, quantityOfEpisodes)
+                .map((episode, index) => (
+                  <Link
+                    to={`/episodes/${episode.id}`}
+                    key={`${episode.air_date}__${index}`}
+                    className={styles['character-details__episodes-item']}
+                  >
+                    <h5 className={styles['character-details__episodes-title']}>
+                      {episode.episode}
+                    </h5>
+                    <p className={styles['character-details__episodes-name']}>
+                      {episode.name}
+                    </p>
+                    <p
+                      className={styles['character-details__episodes-airdate']}
+                    >
+                      {episode.air_date}
+                    </p>
+                    <div
+                      className={styles['character-details__episodes-arrow']}
+                    />
+                  </Link>
+                ))}
+              {quantityOfEpisodes < amountOfEpisodesInCharacter &&
+                !isLoading && (
+                  <button
+                    className={styles['character-details__button']}
+                    onClick={() => setQuantityOfEpisodes((prev) => (prev += 4))}
+                  >
+                    Load more...
+                  </button>
+                )}
             </div>
           </div>
         </>

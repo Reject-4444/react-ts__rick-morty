@@ -4,6 +4,21 @@
 .character-details {
   position: relative;
 
+  &__button {
+    display: block;
+    text-transform: to-upper-case($string: "");
+    border: none;
+    background: transparent;
+    @include hover(transform, scale(1.2));
+    cursor: pointer;
+    margin: 20px 15px;
+    padding: 5px;
+    text-transform: uppercase;
+    @include fontRoboto;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
   &__name {
     text-align: center;
     color: $black-color;

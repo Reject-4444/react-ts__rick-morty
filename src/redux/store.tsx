@@ -16,6 +16,7 @@ import locationsSlice from "./features/locationsSlice";
 import filterLocationsSlice from "./features/filterLocationsSlice";
 import charactersInLocationsSlice from "./features/charactersInLocationsSlice";
 import singleLocationsSlice from "./features/singleLocationsSlice";
+import loadMoreEpisodesInCharacter from "./features/loadMoreEpisodesInCharacter";
 
 export const store = configureStore({
     reducer: {
@@ -36,6 +37,7 @@ export const store = configureStore({
         charactersInEpisodes: charactersInEpisodesSlice,
         charatersInLocations: charactersInLocationsSlice,
         locations: locationsSlice,
+        loadMoreEpisodesInCharacter: loadMoreEpisodesInCharacter,
     }
 })
 

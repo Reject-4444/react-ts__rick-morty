@@ -52,6 +52,7 @@
     border: 1px solid $dark-grey-color;
     border-radius: 8px;
     width: 240px;
+    background: transparent;
 
     @include onTablet {
         width: 170px;
