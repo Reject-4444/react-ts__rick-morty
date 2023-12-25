@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.button-go-back {
+  text-transform: uppercase;
+  @include fontKarla;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  background: transparent;
+  @include hover(transform, scale(1.2));
+  cursor: pointer;
+  background: url(../../../images/logo/arrow-back-logo.svg) no-repeat left;
+  background-origin: content-box;
+  background-clip: content-box;
+  text-indent: 25px;
+  margin-top: 36px;
+
+  @include onTablet {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  @include onDesktop {
+    font-size: 18px;
+    margin-top: 44px;
+  }
+}

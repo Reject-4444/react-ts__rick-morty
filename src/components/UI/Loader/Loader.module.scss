@@ -1,0 +1,21 @@
+@import '../../../styles/variables.scss';
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 5px dashed $green-color;
+    box-shadow: 0 0 10px $blue-color;
+    border-radius: 50%;
+    animation: rotate 3s infinite linear;
+    margin: 30vh auto;
+  }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}

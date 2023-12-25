@@ -1,0 +1,96 @@
+@import './variables.scss';
+
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin active($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:active {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin onLargeScreens {
+  @media (min-width: $large-screens-min-width) {
+    @content;
+  }
+}
+
+@mixin pageGrid {
+  --colomns: 1;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(var(--colomns), 1fr);
+
+  @include onTablet {
+    --colomns: 2;
+  }
+
+  @include onDesktop {
+    --colomns: 4;
+  }
+}
+
+@mixin contentPaddingInline() {
+  padding-inline: 20px;
+
+  @include onTablet {
+    padding-inline: 120px;
+  }
+
+  @include onDesktop() {
+    padding-inline: 210px;
+  }
+}
+
+.container {
+  @include contentPaddingInline;
+}
+
+.container--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+@mixin fontKarla {
+  font-family: 'Karla', Arial, Helvetica, sans-serif;
+}
+
+@mixin fontRoboto {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+@mixin fontPermanentMarker {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.container--card {
+  @include pageGrid;
+  margin-top: 33px;
+  row-gap: 24px;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

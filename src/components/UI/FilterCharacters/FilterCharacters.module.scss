@@ -1,0 +1,45 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.filter {
+  display: grid;
+  gap: 20px;
+  font-weight: 400;
+  @include fontRoboto;
+  @include pageGrid;
+  align-items: center;
+
+  &__input {
+    background: url(../../../images/logo/magnificer-logo.svg) left center no-repeat;
+    padding: 16px;
+    background-origin: content-box;
+    background-clip: content-box;
+    font-size: 16px;
+    text-indent: 28px;
+    border: 1px solid $dark-grey-color;
+    border-radius: 8px;
+    color: $dark-grey-color;
+    width: 240px;
+    
+    &::placeholder {
+      color: $dark-grey-color;
+    }
+
+    &:focus {
+      outline: 1px solid $green-color;
+    }
+  }
+
+  &__select {
+    padding: 18.5px 14px;
+    color: $dark-grey-color;
+    font-size: 16px;
+    border: 1px solid $dark-grey-color;
+    border-radius: 8px;
+    width: 240px;
+
+    &:focus {
+      outline: 1px solid $green-color;
+    }
+  }
+}

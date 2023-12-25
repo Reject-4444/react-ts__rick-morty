@@ -1,0 +1,207 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.character-details {
+  position: relative;
+
+  &__name {
+    text-align: center;
+    color: $black-color;
+    font-size: 36px;
+    @include fontRoboto;
+    font-weight: 400;
+
+    margin-top: 160px;
+    @include onTablet {
+      margin-top: 190px;
+      font-size: 42px;
+    }
+    @include onDesktop {
+      margin-top: 260px;
+      font-size: 48px;
+    }
+  }
+
+  &__titles {
+    margin-top: 42px;
+    margin-left: 5%;
+    display: flex;
+    gap: 86px;
+
+    @include onTablet {
+      gap: 156px;
+    }
+
+    @include onDesktop {
+      gap: 326px;
+    }
+  }
+
+  &__title {
+    color: $grey-color;
+    @include fontRoboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+
+    @include onTablet {
+      font-size: 18px;
+    }
+
+    @include onDesktop {
+      font-size: 20px;
+    }
+  }
+
+  &__informations {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      width: 143px;
+      min-height: 65px;
+      padding: 11px 16px;
+      border-bottom: 1px solid #212121;
+      @include onTablet {
+        width: 203px;
+      }
+      @include onDesktop {
+        width: 383px;
+      }
+
+      &-title {
+        font-size: 12px;
+        font-weight: 700;
+        @include fontRoboto;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: $black-color;
+
+        @include onTablet {
+          font-size: 14px;
+        }
+
+        @include onDesktop {
+          font-size: 16px;
+        }
+      }
+
+      &-value {
+        font-size: 10px;
+        color: $dark-grey-color;
+        @include fontRoboto;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 20px;
+
+        @include onTablet {
+          font-size: 12px;
+        }
+
+        @include onDesktop {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-left: 5%;
+    display: flex;
+    gap: 17px;
+    margin-top: 36px;
+
+    @include onTablet {
+        gap: 60px;
+    }
+
+    @include onDesktop {
+        gap: 60px;
+    }
+  }
+
+  &__episodes {
+
+    &-arrow {
+      background: url(../../images/logo/arrow-right.svg);
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 5%;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    &-item {
+        width: 143px;
+        padding: 11px 16px;
+        border-bottom: 1px solid #212121;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        cursor: pointer;
+        @include hover(transform, scale(1.05));
+
+        @include onTablet {
+            width: 203px;
+        }
+
+        @include onDesktop {
+            width: 383px;
+        }
+    }
+
+    &-title {
+        color: $black-color;
+        font-size: 12px;
+        font-weight: 700;
+        @include fontRoboto;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+
+        @include onTablet {
+          font-size: 14px;
+        }
+
+        @include onDesktop {
+          font-size: 16px;
+        }
+    }
+
+    &-name {
+        color: $dark-grey-color;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 20px;
+        @include fontRoboto;
+
+        @include onTablet {
+          font-size: 12px;
+        }
+
+        @include onDesktop {
+          font-size: 14px;
+        }
+    }
+
+    &-airdate {
+        color: $grey-color;
+        font-size: 8px;
+        @include fontRoboto;
+        font-weight: 500;
+        line-height: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        
+        @include onTablet {
+          font-size: 9px;
+        }
+
+        @include onDesktop {
+          font-size: 10px;
+        }
+    }
+  }
+}

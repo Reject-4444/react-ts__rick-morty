@@ -1,0 +1,21 @@
+@import '../../../styles/mixins.scss';
+
+.image-character-details {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 16px;
+    left: 50%;
+
+    @include onTablet {
+        width: 230px;
+        height: 230px;
+    }
+
+    @include onDesktop {
+        width: 300px;
+        height: 300px;
+    }
+}

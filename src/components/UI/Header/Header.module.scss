@@ -1,0 +1,143 @@
+@import '../../../styles/fonts.scss';
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+
+.header {
+  box-shadow: -2px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  height: 60px;
+
+  &__burger-menu {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url(../../../images/logo/burger-menu-logo.svg) no-repeat center;
+    border: none;
+    cursor: pointer;
+    @include hover(transform, scale(1.1));
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__main-logo {
+    background: url(../../../images/logo/main-logo-header.svg) no-repeat center;
+    display: block;
+    width: 46px;
+    height: 49px;
+    @include hover(transform, scale(1.1));
+  }
+
+  &__nav {
+    display: none;
+    @include onTablet {
+      display: block;
+    }
+    &-list {
+        list-style: none;
+        display: flex;
+        gap: 24px;
+        @include fontKarla;
+
+        @include onTablet {
+          font-size: 16px;
+        }
+
+        @include onDesktop {
+          font-size: 18px;
+        }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      padding-block: 20px;
+      @include active(color, $green-color);
+      @include hover(transform, scale(1.1));
+
+      &--active {
+        color: $green-color;
+      }
+
+    }
+  }
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: $blue-color;
+    box-shadow: 0 0 10px $green-color;
+  }
+
+  &__button {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background: url(../../../images/logo/icon-close.svg) no-repeat center;
+    transition: transform, 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    padding-inline: 2vmin;
+
+  }
+  
+  &__link {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $blue-color;
+    font-size: 24px;
+    transition: transform, 0.3s;
+    text-shadow: 0 0 10px $green-color;
+    @include fontRoboto;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      color: $green-color;
+      text-shadow: 0 0 10px $blue-color;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
