@@ -10,7 +10,8 @@ react-router-dom
 lodash
 axios
 body-scroll-lock
-Project Description:
+redux-toolkit
+
 
 **Description:**
 
