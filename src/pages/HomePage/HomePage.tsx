@@ -49,6 +49,15 @@ export const HomePage = () => {
           />
         ))}
       </div>
+      <p className={styles['home-page__description']}>
+        "Rick and Morty" is an animated science fiction sitcom created by Justin
+        Roiland and Dan Harmon. The show follows the misadventures of an
+        eccentric, alcoholic scientist, Rick Sanchez, and his good-hearted but
+        easily influenced grandson, Morty Smith. Known for its dark humor,
+        intricate storytelling, and imaginative exploration of parallel
+        universes, the series has gained a cult following since its debut in
+        2013.
+      </p>
     </div>
   );
 };
