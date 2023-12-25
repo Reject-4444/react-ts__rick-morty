@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -28,6 +29,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,10 +53,13 @@
     ]
   },
   "devDependencies": {
-    "@types/body-scroll-lock": "^3.1.2",
-    "@types/sass": "^1.45.0",
-    "@types/webpack-env": "^1.18.4",
-    "sass": "^1.69.5",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "gh-pages": "^6.1.1",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.2",
     "typescript": "^5.3.3"
   }
 }
