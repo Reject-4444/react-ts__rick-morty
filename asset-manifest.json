@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/react-ts__rick-morty/static/css/main.64450db9.css",
+    "main.js": "/react-ts__rick-morty/static/js/main.991ec14f.js",
+    "static/media/rickandmorty1.png": "/react-ts__rick-morty/static/media/rickandmorty1.d72f31df0175887c6979.png",
+    "static/media/main-logo-header.svg": "/react-ts__rick-morty/static/media/main-logo-header.6568c02be897c1dfca9e.svg",
+    "static/media/top-picture-characters.svg": "/react-ts__rick-morty/static/media/top-picture-characters.cc4a7d1826c4c03d11cf.svg",
+    "static/media/rickandmorty4.png": "/react-ts__rick-morty/static/media/rickandmorty4.e0ba46f3e1813b209c2a.png",
+    "static/media/rickandmorty8.png": "/react-ts__rick-morty/static/media/rickandmorty8.f12ae54f8e9abb93716a.png",
+    "static/media/rickandmorty6.png": "/react-ts__rick-morty/static/media/rickandmorty6.74e04699b570d71b1eb0.png",
+    "static/media/rickandmorty7.png": "/react-ts__rick-morty/static/media/rickandmorty7.de9a5e39e52ba83170b0.png",
+    "static/media/top-picture-locations.svg": "/react-ts__rick-morty/static/media/top-picture-locations.922b9f3976fb5ddd6a3b.svg",
+    "static/media/top-picture-episodes.svg": "/react-ts__rick-morty/static/media/top-picture-episodes.923e254c24f1a4f060c7.svg",
+    "static/media/rickandmorty5.png": "/react-ts__rick-morty/static/media/rickandmorty5.58904cb12e30953969c6.png",
+    "static/media/magnificer-logo.svg": "/react-ts__rick-morty/static/media/magnificer-logo.3d3add172bb28ef5ce36.svg",
+    "index.html": "/react-ts__rick-morty/index.html",
+    "static/media/icon-close.svg": "/react-ts__rick-morty/static/media/icon-close.c11233f58beb1d435c48.svg",
+    "static/media/burger-menu-logo.svg": "/react-ts__rick-morty/static/media/burger-menu-logo.0e6c90a07d5a2c322e76.svg",
+    "static/media/arrow-back-logo.svg": "/react-ts__rick-morty/static/media/arrow-back-logo.9002e21628d889cace16.svg",
+    "static/media/arrow-right.svg": "/react-ts__rick-morty/static/media/arrow-right.5a8142b42ca44e4161ef.svg",
+    "main.64450db9.css.map": "/react-ts__rick-morty/static/css/main.64450db9.css.map",
+    "main.991ec14f.js.map": "/react-ts__rick-morty/static/js/main.991ec14f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64450db9.css",
+    "static/js/main.991ec14f.js"
+  ]
+}
