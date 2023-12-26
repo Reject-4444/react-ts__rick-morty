@@ -14,7 +14,7 @@ const charactersSlice = createSlice({
   initialState,
   reducers: {
     getCharacters: (state, action: PayloadAction<CharactersType[]>) => {
-      state.characters = state.characters.concat(action.payload);
+      state.characters = action.payload;
     },
   },
 });
