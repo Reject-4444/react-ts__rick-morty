@@ -2,15 +2,15 @@
 
 **Technologies Used:**
 
-React
-TypeScript
-SASS
-classnames
-react-router-dom
-lodash
-axios
-body-scroll-lock
-redux-toolkit
+- React
+- TypeScript
+- SASS
+- classnames
+- react-router-dom
+- lodash
+- axios
+- body-scroll-lock
+- redux-toolkit
 
 
 **Description:**
