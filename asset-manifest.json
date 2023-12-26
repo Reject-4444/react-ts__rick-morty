@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-ts__rick-morty/static/css/main.7e624fe4.css",
-    "main.js": "/react-ts__rick-morty/static/js/main.70fc22a9.js",
+    "main.js": "/react-ts__rick-morty/static/js/main.c919d19f.js",
     "static/media/rickandmorty1.png": "/react-ts__rick-morty/static/media/rickandmorty1.d72f31df0175887c6979.png",
     "static/media/main-logo-header.svg": "/react-ts__rick-morty/static/media/main-logo-header.6568c02be897c1dfca9e.svg",
     "static/media/top-picture-characters.svg": "/react-ts__rick-morty/static/media/top-picture-characters.cc4a7d1826c4c03d11cf.svg",
@@ -19,10 +19,10 @@
     "static/media/arrow-back-logo.svg": "/react-ts__rick-morty/static/media/arrow-back-logo.9002e21628d889cace16.svg",
     "static/media/arrow-right.svg": "/react-ts__rick-morty/static/media/arrow-right.5a8142b42ca44e4161ef.svg",
     "main.7e624fe4.css.map": "/react-ts__rick-morty/static/css/main.7e624fe4.css.map",
-    "main.70fc22a9.js.map": "/react-ts__rick-morty/static/js/main.70fc22a9.js.map"
+    "main.c919d19f.js.map": "/react-ts__rick-morty/static/js/main.c919d19f.js.map"
   },
   "entrypoints": [
     "static/css/main.7e624fe4.css",
-    "static/js/main.70fc22a9.js"
+    "static/js/main.c919d19f.js"
   ]
 }
