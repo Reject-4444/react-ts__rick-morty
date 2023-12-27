@@ -61,7 +61,6 @@ export const Characters = () => {
   useEffect(() => {
     fetchAllCharacters();
     fetchCountOfCharactersPages();
-    console.log(quantityPages);
   }, [quantityPages]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filteredCharacters = useMemo(() => {

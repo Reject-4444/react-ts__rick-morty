@@ -11,8 +11,8 @@ import cn from 'classnames';
 export const HomePage = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliders = [
-    sliderImage1,
     sliderImage2,
+    sliderImage1,
     sliderImage3,
     sliderImage4,
     sliderImage5,
@@ -20,11 +20,15 @@ export const HomePage = () => {
   ];
 
   useEffect(() => {
-    setInterval(() => {
+    const inervalId = setInterval(() => {
       setSliderIndex(
         (prevSliderIndex) => (prevSliderIndex + 1) % sliders.length
       );
     }, 3000);
+
+    return () => {
+      clearInterval(inervalId);
+    }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className={styles['home-page']}>
